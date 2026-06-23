@@ -130,7 +130,7 @@ export async function getYtdlPath(): Promise<string> {
   const tmpPath = ytdlPath + '.tmp';
   const downloadFile = (currentUrl: string): Promise<void> => {
     return new Promise<void>((resolve, reject) => {
-      https.get(currentUrl, { headers: { 'User-Agent': 'MyTeub-Archiver' } }, (response) => {
+      https.get(currentUrl, { headers: { 'User-Agent': 'YouKeep-Archiver' } }, (response) => {
         if (response.statusCode === 301 || response.statusCode === 302) {
           const redirectUrl = response.headers.location!;
           downloadFile(redirectUrl).then(resolve).catch(reject);

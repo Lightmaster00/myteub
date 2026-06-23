@@ -461,7 +461,7 @@
 
               <div v-if="!diagnosticBinaryResult.ffmpegAvailable" class="ffmpeg-warning-box mt-3">
                 <strong class="warning-title">💡 Note on video quality:</strong>
-                <p class="warning-desc">FFmpeg was not detected on your system. Videos will be downloaded in their default combined format (usually limited to 720p maximum) and thumbnails cannot be converted to JPG. For maximum quality (1080p, 4K, etc.), please install <code>ffmpeg</code> (for example via <code>brew install ffmpeg</code> on macOS or <code>sudo apt install ffmpeg</code> on Linux) and restart MyTeub.</p>
+                <p class="warning-desc">FFmpeg was not detected on your system. Videos will be downloaded in their default combined format (usually limited to 720p maximum) and thumbnails cannot be converted to JPG. For maximum quality (1080p, 4K, etc.), please install <code>ffmpeg</code> (for example via <code>brew install ffmpeg</code> on macOS or <code>sudo apt install ffmpeg</code> on Linux) and restart YouKeep.</p>
               </div>
 
               <div v-if="diagnosticBinaryResult.stderr" class="diagnostic-stderr-box mt-3">
@@ -1208,7 +1208,7 @@ const userFormSuccess = ref(false);
 const oldUsername = ref('');
 
 const copyCredentials = () => {
-  const text = `MyTeub Credentials:\nUsername: ${oldUsername.value || userForm.username}\nTemporary password: ${generatedPassword.value}`;
+  const text = `YouKeep Credentials:\nUsername: ${oldUsername.value || userForm.username}\nTemporary password: ${generatedPassword.value}`;
   navigator.clipboard.writeText(text).then(() => {
     toast.success('Credentials copied to clipboard!');
   }).catch(() => {

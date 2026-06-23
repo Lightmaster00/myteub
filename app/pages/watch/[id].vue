@@ -228,7 +228,7 @@
             />
             <div>
               <h3 class="channel-name">{{ video.channel_title }}</h3>
-              <p class="sub-count">Archived in MyTeub</p>
+              <p class="sub-count">Archived in YouKeep</p>
             </div>
           </div>
           
@@ -655,7 +655,7 @@ const playlistId = computed(() => route.query.playlistId ? String(route.query.pl
 // Fetch playlist details and videos
 const { data: playlistData, pending: playlistPending } = await useAsyncData<any>(
   'watch-playlist-data',
-  () => playlistId.value ? $fetch(`/api/playlists/${playlistId.value}`) : Promise.resolve(null),
+  () => playlistId.value ? $fetch<any>(`/api/playlists/${playlistId.value}` as any) : Promise.resolve(null),
   { immediate: !!playlistId.value, watch: [playlistId] }
 );
 

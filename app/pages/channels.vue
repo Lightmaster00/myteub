@@ -70,7 +70,7 @@
             {{ triggeringSync ? 'Initial video search...' : 'Empty or unsynced channel' }}
           </h4>
           <p style="font-size: 13.5px; color: var(--text-secondary); margin: 4px 0 0 0; line-height: 1.45;">
-            {{ triggeringSync ? 'MyTeub is querying YouTube to retrieve the list of videos for this channel. Please wait.' : 'No videos have been discovered for this channel yet. MyTeub will automatically launch a search in the background to synchronize the list.' }}
+            {{ triggeringSync ? 'YouKeep is querying YouTube to retrieve the list of videos for this channel. Please wait.' : 'No videos have been discovered for this channel yet. YouKeep will automatically launch a search in the background to synchronize the list.' }}
           </p>
         </div>
       </div>

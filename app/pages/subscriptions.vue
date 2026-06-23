@@ -155,7 +155,7 @@ const fetchVideos = async (isLoadMore = false) => {
 
 const setupObserver = () => {
   observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting && hasMore.value && !loadingMore.value && !pending.value) {
+    if (entries[0]?.isIntersecting && hasMore.value && !loadingMore.value && !pending.value) {
       page.value++;
       fetchVideos(true);
     }
