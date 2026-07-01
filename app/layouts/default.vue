@@ -501,6 +501,8 @@ onUnmounted(() => {
   scrollbar-gutter: stable;
   padding: 24px;
   background: var(--bg-base);
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 768px) {

@@ -5,12 +5,14 @@
       <p>Loading video...</p>
     </div>
 
-    <div v-else-if="error || !video" class="error-state glass-panel">
-      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-gradient"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-      <h3>Loading Error</h3>
-      <p>{{ errorMsg || 'This video is not found or you don\'t have permission to view it.' }}</p>
-      <NuxtLink to="/" class="btn btn-secondary mt-4">Back to Home</NuxtLink>
-    </div>
+    <EmptyState
+      v-else-if="error || !video"
+      title="Loading Error"
+      :description="errorMsg || 'This video was not found or you do not have permission to view it.'"
+      icon="video"
+      action-text="Back to Home"
+      action-route="/"
+    />
 
     <div v-else class="watch-content">
       <!-- Left Column (Player + Description) -->
@@ -1268,7 +1270,7 @@ const onVideoHidden = (id: string) => {
   margin: 0 auto;
 }
 
-.loading-state, .error-state {
+.loading-state {
   display: flex;
   flex-direction: column;
   align-items: center;

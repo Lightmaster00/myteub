@@ -232,17 +232,11 @@ const handleChangeOwnPassword = async () => {
 .account-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 40px 20px;
+  width: 100%;
 }
 
 .account-header {
   margin-bottom: 30px;
-}
-
-.page-title {
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 8px;
 }
 
 .page-subtitle {
@@ -365,24 +359,9 @@ h4 {
   min-width: 220px;
 }
 
-.form-group {
-  margin-bottom: 34px;
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 12px;
-  font-weight: 500;
-}
-
 .form-row .form-group {
   margin-bottom: 0;
 }
 
-.btn-block {
-  width: 100%;
-  justify-content: center;
-  padding: 14px;
-  margin-top: 16px;
-}
+
 </style>

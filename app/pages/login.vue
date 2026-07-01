@@ -218,10 +218,7 @@ const handleLogin = async () => {
   gap: 20px;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .error-box {
   display: flex;
